@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EBF5FB;
+    color: white;
+    background-image: url(./pictures/background.jpg);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #2874A6;
+    position: sticky;
+}
+
+nav .profile {
+    display: flex;
+    align-items: center;
+}
+
+
+nav .profile img {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav .profile h1 {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    color: black;
+}
+
+nav .profile h1:hover::before{
+    content: 'Je me présente, ';
+    transition: 3s;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #EBF5FB;
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover {
+    background-color: #EBF5FB;
+    border: 2px solid #fff;
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contenu{
+    margin: 4%;
+}
+
+.contenu header{
+    margin-top: 5%;
+    max-width: 80%;
+}
+
+.contenu header h1{
+    margin: 0;
+    /*text-transform: uppercase;*/
+    font-family: 'Lora', sans-serif;
+    text-transform: uppercase;
+    font-size: 4vw;
+    color: #2874A6;
+
+}
+
+.contenu header h1:hover{
+    color: white;
+    transition: 3s;
+}
+
+.contenu header p{
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.contenu header button {
+    background-color: inherit;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #818181;
+    cursor: pointer;
+}
+
+.contenu header button:hover{
+    color: #818181;
+    border-bottom-color: white;
+}
+
+.contenu .presentation_image img{
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.5s;
+}
+
+.projects_section div:nth-child(1) a{
+    color: #2874A6;
+}
+.projects_section div:nth-child(1) a:hover{
+    color: white;
+    transition: 3s;;
+}
+
+.projects_section{
+    margin-top: 6%;
+}
+
+.projects_section h1{
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 3vw;
+}
+
+.projects_section .projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects_sections .projects .project h4{
+    margin: 0;
+}
+.projects_section .projects .project{
+    margin-right: 20px;
+    max-width: 350px;
+}
+
+.projects_section .projects p:first-of-type{
+    font-size: 15px;
+}
+
+.projects_section .projects .dates{
+    font-style: italic;
+}
+
+
+.contenu .presentation_image img:hover{
+    filter: brightness(50%);
+}
+
+footer{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #2874A6;
+    max-height: 25%;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    color: white;
+    transition: 1s;
+}
+
+#fst-img, #snd-img{
+    width: 75%;
+}
+
+.colonne2, .colonne3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .contenu header{
+        margin-top: 10%;
+        max-width: 100% ;
+    }
+
+    .contenu .projects_section h1{
+        font-size: 1.5em;
+    }
+    
+    .projects_section .projects .project{
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    footer{
+        justify-content: flex-start;
+        padding: 6%;
+    }
+}
+
